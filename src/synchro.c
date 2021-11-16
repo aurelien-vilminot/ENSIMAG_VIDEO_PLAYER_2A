@@ -5,7 +5,7 @@
 extern bool fini;
 
 /* les variables pour la synchro, ici */
-
+pthread_t draw;
 
 
 /* l'implantation des fonctions de synchro ici */

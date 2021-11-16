@@ -8,7 +8,7 @@ extern bool fini;
 
 
 /* Les extern des variables pour la synchro ici */
-
+extern pthread_t draw;
 
 /* Fonctions de synchro à implanter */
 
