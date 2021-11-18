@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <SDL2/SDL.h>
+#include <pthread.h>
 #include "ensitheora.h"
 #include "synchro.h"
 #include "stream_common.h"
@@ -61,9 +62,9 @@ void *draw2SDL(void *arg) {
     signalerFenetreEtTexturePrete();
 
     /* Protéger l'accès à la hashmap */
-
+    pthread_mutex_lock(&mutexStreamState);
     HASH_FIND_INT( theorastrstate, &serial, s );
-
+    pthread_mutex_unlock(&mutexStreamState);
 
 
     assert(s->strtype == TYPE_THEORA);

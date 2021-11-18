@@ -6,6 +6,7 @@ extern bool fini;
 
 /* les variables pour la synchro, ici */
 pthread_t draw;
+pthread_mutex_t mutexStreamState;
 
 
 /* l'implantation des fonctions de synchro ici */
