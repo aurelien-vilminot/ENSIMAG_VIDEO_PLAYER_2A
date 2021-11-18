@@ -40,7 +40,8 @@ int main(int argc, char *argv[]) {
     pthread_cancel(draw);
 
     // attendre les 2 threads videos
+    pthread_join(theora, NULL);
+    pthread_join(draw, NULL);
 
-    
     exit(EXIT_SUCCESS);    
 }
