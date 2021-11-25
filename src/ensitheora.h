@@ -22,4 +22,7 @@ void theora2SDL(struct streamstate *s);
 extern int windowsx;
 extern int windowsy;
 
+extern int tex_iaff;
+extern int tex_iwri;
+
 #endif
